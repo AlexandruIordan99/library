@@ -89,6 +89,7 @@ let bookCardContainer = document.getElementById('bookCardContainer');
 
 function populateBookCardContainer(book){
   let bookCard = document.createElement('div');
+  bookCard.classList.add('bookCard');
   bookCard.innerHTML=        `
   <div><strong>${book.title}</strong></div>
   <p>Author: ${book.author}</p>
@@ -101,11 +102,26 @@ function populateBookCardContainer(book){
 `;
   bookCardContainer.appendChild(bookCard);
   bookCard.classList.add('bookCard', );
+
+
+  const deleteBookButton = bookCard.querySelector('.delete');
+
+  deleteBookButton.addEventListener('click', () =>{
+    bookCard.remove();
+  })
+
+  const readOrNotButton = bookCard.querySelector('.readOrNot');
+
+  readOrNotButton.addEventListener('click', () =>{
+
+  })
+
 }
 
 for (let i=0; i<library.length; i++){
   populateBookCardContainer(library[i]);
 }
+
 
 
 
