@@ -96,7 +96,7 @@ function populateBookCardContainer(book){
   <p>Page Count: ${book.pageCount}</p>
   <div class ="readStatus">Read</div>
         <div class="bookCardButtons">
-        <button class ="readOrNot">Set already read</button>
+        <button class ="readOrNot">Set as not read</button>
         <button class ="delete">Delete</button>
       </div>
 `;
@@ -108,12 +108,19 @@ function populateBookCardContainer(book){
 
   deleteBookButton.addEventListener('click', () =>{
     bookCard.remove();
+
   })
 
   const readOrNotButton = bookCard.querySelector('.readOrNot');
-
+  const readStatus = bookCard.querySelector('.readStatus');
   readOrNotButton.addEventListener('click', () =>{
-
+      if(readOrNotButton.innerText === "Set as not read"){
+        readStatus.innerText = "Not read";
+        readOrNotButton.innerText = "Set as read";
+      }else if(readOrNotButton.innerText === "Set as read"){
+        readStatus.innerText = "Read";
+        readOrNotButton.innerText = "Set as not read";
+      }
   })
 
 }
