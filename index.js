@@ -29,15 +29,11 @@ function displayLibrary(){
 }
 displayLibrary();
 
-
-
 const newBookButton = document.getElementById('newBookButton');
 
 const newBookForm = document.getElementById('newBookForm');
 
 const cancelButton = document.getElementById('cancelButton');
-
-const submitButton = document.getElementById('submitButton');
 
 const overlay = document.getElementById('overlay');
 
@@ -71,8 +67,17 @@ cancelButton.addEventListener('click', () =>{
 
 overlay.addEventListener('click', () =>{
   closeOverlay(overlay);
-  closeOverlay(newBookForm);
+  closeForm(newBookForm);
 })
 
 let bookCardContainer = document.getElementById('bookCardContainer');
 
+const submitButton = document.getElementById('submitButton');
+
+
+submitButton.addEventListener('click', () =>{
+
+
+  closeOverlay(overlay);
+  closeForm(newBookForm);
+})

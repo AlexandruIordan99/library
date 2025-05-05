@@ -3,6 +3,17 @@
   flex-direction: column;
 }
 
+html, body{
+  height: 100vh;
+  margin: 0;
+}
+
+.contentWrapper{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .header{
   display: flex;
   justify-content: center;
@@ -10,12 +21,14 @@
   align-content: center;
   color: white;
   background-color: #777eb4;
+  height: 10vh;
 }
 
 .bookList{
   display: flex;
   justify-content: space-around;
   background-color: lightgray;
+  height: 80vh;
 }
 
 .bookCard{
@@ -29,6 +42,7 @@
   margin: 10px;
   box-sizing: border-box;
   padding: 10px;
+  height: 20vh;
 }
 
 .bookTitle{
@@ -47,6 +61,7 @@
 .bookData > div{
   padding-bottom: 5px;
 }
+
 
 
 
@@ -69,13 +84,16 @@ button{
 
 }
 
-footer{
+.newButtonDiv{
   display: flex;
   background-color: #777eb4;
-  justify-content: space-between;
-
+  justify-content: flex-end;
+  height: 10vh;
 }
 
+footer{
+  margin-top: auto;
+}
 
 img{
   width: 50px;
