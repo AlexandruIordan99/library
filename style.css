@@ -42,7 +42,7 @@ html, body{
   margin: 10px;
   box-sizing: border-box;
   padding: 10px;
-  height: 20vh;
+  height: 22vh;
 }
 
 .bookTitle{
@@ -62,9 +62,6 @@ html, body{
   padding-bottom: 5px;
 }
 
-
-
-
 #newBookButton{
   align-self: center;
   align-content: center;
@@ -81,7 +78,6 @@ li{
 
 button{
   gap: 10px;
-
 }
 
 .newButtonDiv{

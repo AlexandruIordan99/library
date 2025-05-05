@@ -70,14 +70,42 @@ overlay.addEventListener('click', () =>{
   closeForm(newBookForm);
 })
 
-let bookCardContainer = document.getElementById('bookCardContainer');
-
 const submitButton = document.getElementById('submitButton');
 
-
 submitButton.addEventListener('click', () =>{
+    let title = document.getElementById('title').value;
+    let author = document.getElementById('author').value;
+    let pageCount = document.getElementById('pageCount').value;
+    let inputBook = new Book(title, author, pageCount);
+    library.push(inputBook);
+    populateBookCardContainer(library.pop());
 
-
-  closeOverlay(overlay);
-  closeForm(newBookForm);
+    closeOverlay(overlay);
+    closeForm(newBookForm);
 })
+
+let bookCardContainer = document.getElementById('bookCardContainer');
+
+
+function populateBookCardContainer(book){
+  let bookCard = document.createElement('div');
+  bookCard.innerHTML=        `
+  <div><strong>${book.title}</strong></div>
+  <p>Author: ${book.author}</p>
+  <p>Page Count: ${book.pageCount}</p>
+  <div class ="readStatus">Read</div>
+        <div class="bookCardButtons">
+        <button class ="readOrNot">Set already read</button>
+        <button class ="delete">Delete</button>
+      </div>
+`;
+  bookCardContainer.appendChild(bookCard);
+  bookCard.classList.add('bookCard', );
+}
+
+for (let i=0; i<library.length; i++){
+  populateBookCardContainer(library[i]);
+}
+
+
+
