@@ -29,8 +29,11 @@ function displayLibrary(){
 }
 displayLibrary();
 
-let newBookButton = document.getElementById('newBookButton');
+const newBookButton = document.getElementById('newBookButton');
 
+newBookButton.addEventListener('click', function(){
+
+})
 
 let bookCardContainer = document.getElementById('bookCardContainer');
 
