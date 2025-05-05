@@ -40,6 +40,11 @@
   padding-bottom: 5px;
 }
 
+.newBookButton{
+  align-self: start;
+  padding: 10px;
+}
+
 li{
   list-style: none;
 }
