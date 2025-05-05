@@ -29,4 +29,8 @@ function displayLibrary(){
 }
 displayLibrary();
 
+let newBookButton = document.getElementById('newBookButton');
+
+
+let bookCardContainer = document.getElementById('bookCardContainer');
 

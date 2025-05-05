@@ -8,11 +8,14 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  color: white;
+  background-color: #777eb4;
 }
 
 .bookList{
   display: flex;
   justify-content: space-around;
+  background-color: lightgray;
 }
 
 .bookCard{
@@ -21,6 +24,11 @@
   align-items: flex-start;
   gap: 10px;
   border: 2px solid green;
+  color: white;
+  background-color: #777eb4;
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .bookTitle{
@@ -40,9 +48,16 @@
   padding-bottom: 5px;
 }
 
-.newBookButton{
-  align-self: start;
+
+
+#newBookButton{
+  align-self: center;
+  align-content: center;
+  justify-self: center;
   padding: 10px;
+  margin: 10px;
+  width: 100px;
+  height: 50px;
 }
 
 li{
@@ -51,4 +66,11 @@ li{
 
 button{
   gap: 10px;
+
+}
+
+footer{
+  display: flex;
+  background-color: #777eb4;
+  justify-content: center;
 }
