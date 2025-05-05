@@ -29,10 +29,49 @@ function displayLibrary(){
 }
 displayLibrary();
 
+
+
 const newBookButton = document.getElementById('newBookButton');
 
-newBookButton.addEventListener('click', function(){
+const newBookForm = document.getElementById('newBookForm');
 
+const cancelButton = document.getElementById('cancelButton');
+
+const submitButton = document.getElementById('submitButton');
+
+const overlay = document.getElementById('overlay');
+
+function openForm(modal){
+  if (modal ==null){
+    return;
+  }
+  modal.classList.add('active');
+  overlay.classList.add('active');
+}
+
+function closeForm(modal){
+  if (modal == null){
+    return;
+  }
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+function closeOverlay(overlay){
+  overlay.classList.remove('active');
+}
+
+newBookButton.addEventListener('click', () =>{
+    openForm(newBookForm);
+})
+
+cancelButton.addEventListener('click', () =>{
+  closeForm(newBookForm);
+})
+
+overlay.addEventListener('click', () =>{
+  closeOverlay(overlay);
+  closeOverlay(newBookForm);
 })
 
 let bookCardContainer = document.getElementById('bookCardContainer');

@@ -85,15 +85,57 @@ img{
 }
 
 #newBookForm{
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
   position: fixed;
-  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  background-color: #777eb4;
+  color: white;
+  border: 2px solid black;
+  width: 300px;
+  max-width: 80%;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 10;
+}
+
+#newBookForm.active{
+  transform: translate(-50%, -50%) scale(1);
 
 }
 
-#newBookForm.open{
+#formButtonDiv{
+  display: flex;
+  justify-content: space-evenly;
+}
+#submitButton, #cancelButton{
+  width: 140px;
+}
+
+.newBookForm.open{
   opacity: 1;
   z-index: 999;
+  display: block;
+}
 
+#overlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+
+#overlay.active{
+  opacity: 1;
+  pointer-events: all;
 }

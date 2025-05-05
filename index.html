@@ -36,31 +36,33 @@
 
   <footer>
 
-    <form id ="newBookForm">
-
-      <label for="title">Title<br></label>
-      <input type ="text" id ="title" required><br>
-      <label for="author">Author<br></label>
-      <input type ="text" id ="author" required><br>
-      <label for="pageCount">Page Count<br></label>
-      <input type ="text" id ="pageCount" required> <br>
-
-
-      <label for="readStatus">
-        Already read <input id = readStatus type="checkbox">
-      </label> <br>
-
-      <button class ="submit">Submit</button>
-      <button class ="cancel">Cancel</button>
-
-    </form>
-
-    <button id ="newBookButton">New book</button>
+    <button id ="newBookButton" data-modal-target = "newBookForm">New book</button>
 
 
   </footer>
-</div>
+  <form id ="newBookForm" class="newBookForm">
 
+    <label for="title">Title<br></label>
+    <input type ="text" id ="title" required><br>
+    <label for="author">Author<br></label>
+    <input type ="text" id ="author" required><br>
+    <label for="pageCount">Page Count<br></label>
+    <input type ="text" id ="pageCount" required> <br>
+
+
+    <label for="readStatus">
+      Already read <input id = readStatus type="checkbox">
+    </label> <br>
+
+    <div id="formButtonDiv">
+
+    <button id="submitButton" type="button">Submit</button>
+    <button id ="cancelButton" type="button">Cancel</button>
+
+    </div>
+  </form>
+</div>
+<div id="overlay"></div>
 
 
 <script src="index.js"></script>
